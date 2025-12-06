@@ -1,0 +1,140 @@
+/* CSS for Lare's Recipe */
+
+/* Root Variables */
+:root {
+    --primary-color: #5d7458; /* Deep Olive Green - Main text/borders */
+    --accent-color: #a35b45; /* Terracotta Red - Highlights/Links */
+    --background-color: #fefdfb; /* Near-White background */
+    --section-bg: #f4f6f0; /* Very Light Green/Grey for blocks */
+    --font-serif: 'Georgia', serif; /* Classic, readable serif */
+    --font-sans: 'Arial', sans-serif; /* Clean, default sans-serif for body */
+}
+
+/* Reset Box Model and set Base Font */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Typography & Colors */
+    font-family: var(--font-sans);
+    background-color: var(--background-color);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Styling Details */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Title Styling (h2) */
+/* Using a Class Selector */
+.recipe-title { 
+    /* Typography & Colors */
+    font-family: var(--font-serif);
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    text-decoration: none !important;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 25px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+/* Recipe Details Section (Using Flexbox) */
+/* Using an ID Selector */
+#recipe-details { 
+    /* Layout & Structure (Flexbox) */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* Spacing & Alignment */
+    background-color: var(--section-bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Styling for the detail items within the flex container */
+#recipe-details > div {
+    text-align: center;
+    padding: 0 10px;
+}
+
+#recipe-details h4 {
+    color: var(--accent-color);
+    font-size: 1.1em;
+    margin-bottom: 2px;
+}
+
+#recipe-details p {
+    margin-top: 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Ingredients and Instructions Headings */
+/* Using a Class Selector */
+.section-heading { 
+    font-size: 1.6em;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* List and Emphasis Styling */
+ul, ol {
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+ul li, ol li {
+    margin-bottom: 12px;
+}
+
+/* Styling the prep notes (chopped, minced, etc.) */
+em {
+    color: var(--accent-color);
+    font-style: slant;
+    font-weight: 500;
+}
+
+/* Styling the <mark> tag for the heading text, removing the default yellow background */
+mark {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Tips and Links */
+h3 strong {
+    color: var(--accent-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 5px;
+}
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
