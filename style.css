@@ -138,3 +138,39 @@ a:hover {
     color: var(--accent-color);
     text-decoration: underline;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Targets screens that are 600px wide or smaller (typical mobile portrait orientation) */
+@media (max-width: 600px) {
+    
+    #recipe-details {
+        flex-direction: column; 
+        align-items: stretch;
+        padding: 10px 15px;
+        margin: 20px 5px;
+    }
+    
+    #recipe-details > div {
+        text-align: left;
+        padding: 8px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    #recipe-details > div:last-child {
+        border-bottom: none;
+    }
+
+    .recipe-title {
+        font-size: 1.8em;
+    }
+    
+    img {
+        max-width: 90%;
+    }
+
+    body {
+        padding: 15px;
+        margin: 15px auto;
+    }
+}
